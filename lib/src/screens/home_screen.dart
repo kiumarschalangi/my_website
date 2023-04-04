@@ -9,8 +9,8 @@ import '/src/widgets/medium_screen_layout.dart';
 import '/src/widgets/responsive.dart';
 import '/src/widgets/small_screen_layout.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
