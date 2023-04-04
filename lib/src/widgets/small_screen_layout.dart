@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:my_website/src/widgets/page_content.dart';
-import 'package:my_website/src/widgets/project_carousel_card.dart';
-import 'package:my_website/src/widgets/responsive.dart';
-import 'package:my_website/src/widgets/social_media_icons.dart';
 
-import '../constants/assets.dart';
-import '../constants/strings.dart';
-import '../constants/text_styles.dart';
+import '/src/constants/assets.dart';
+import '/src/constants/strings.dart';
+import '/src/constants/text_styles.dart';
+import '/src/widgets/page_content.dart';
+import '/src/widgets/project_carousel_card.dart';
 
 class SmallScreenLayout extends StatelessWidget {
   const SmallScreenLayout({
@@ -59,24 +57,14 @@ class SmallScreenLayout extends StatelessWidget {
                 Assets.canto2,
               ]),
           const ProjectCrouselCard(
-              title: 'Bagzee',
-              description: 'Luggage pick up service app for the drivers ',
-              assetNames: <String>[
-                Assets.bagzee1,
-                Assets.bagzee2,
-                Assets.bagzee3,
-              ]),
-          Text(
-            Strings.rights_reserved,
-            style: TextStyles.body1.copyWith(
-              fontSize: ResponsiveWidget.isSmallScreen(context) ? 8 : 10.0,
-            ),
+            title: 'Bagzee',
+            description: 'Luggage pick up service app for the drivers ',
+            assetNames: <String>[
+              Assets.bagzee1,
+              Assets.bagzee2,
+              Assets.bagzee3,
+            ],
           ),
-          SizedBox(
-              height: ResponsiveWidget.isSmallScreen(context) ? 12.0 : 0.0),
-          const SocialMediaButtons(),
-          SizedBox(
-              height: ResponsiveWidget.isSmallScreen(context) ? 12.0 : 0.0),
         ],
       ),
     );

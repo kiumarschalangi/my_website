@@ -19,7 +19,7 @@ class Strings {
       'Started my journy as an intern in a small start-up and now i work in one of the biggest marketing companies in iran';
   static const String skills_i_have = 'What are my Skills';
   static const String rights_reserved =
-      'build and developed by kiumars chaharlangi 2023';
+      'Build and developed by $firstName $lastName 2023';
   static const String educationSummary =
       'I was always intrested in mechanics as well as computers science so i said to myself why not study both?';
 

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_website/src/widgets/page_content.dart';
 
-import 'custom_footer.dart';
+import '/src/widgets/page_content.dart';
 
 class MediumScreenLayout extends StatelessWidget {
   const MediumScreenLayout({
@@ -21,7 +20,6 @@ class MediumScreenLayout extends StatelessWidget {
               ],
             ),
           ),
-          const CustomFooter()
         ],
       ),
     );

@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import '/src/constants/colors.dart';
 import '/src/constants/strings.dart';
 import '/src/constants/text_styles.dart';
-import '/src/widgets/large_screen_layout.dart';
+import '/src/screens/home_screen_large.dart';
+import '/src/widgets/footer.dart';
 import '/src/widgets/medium_screen_layout.dart';
 import '/src/widgets/responsive.dart';
 import '/src/widgets/small_screen_layout.dart';
@@ -31,13 +32,14 @@ class HomePage extends StatelessWidget {
         builder: (BuildContext context, BoxConstraints constraints) {
           return const SingleChildScrollView(
             child: ResponsiveWidget(
-              largeScreen: LargeScreenLayout(),
+              largeScreen: HomeScreenLarge(),
               mediumScreen: MediumScreenLayout(),
               smallScreen: SmallScreenLayout(),
             ),
           );
         },
       ),
+      bottomNavigationBar: const Footer(),
     );
   }
 }
