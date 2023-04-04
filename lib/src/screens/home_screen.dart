@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '/src/widgets/about_me_section.dart';
 import '/src/widgets/appbar_title.dart';
+import '/src/widgets/educations_section.dart';
 import '/src/widgets/footer.dart';
 import '/src/widgets/skills_section.dart';
 import '/src/widgets/work_experiences_section.dart';
@@ -27,6 +28,10 @@ class HomeScreen extends StatelessWidget {
           Padding(
             padding: EdgeInsets.all(32.0),
             child: WorkExperiencesSection(),
+          ),
+          Padding(
+            padding: EdgeInsets.all(32.0),
+            child: EducationSection(),
           ),
           // Padding(
           //   padding: EdgeInsets.all(32.0),
