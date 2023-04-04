@@ -9,6 +9,7 @@ class Strings {
   static const String skills = ' Skills';
   static const String workExperiences = ' Work Experiences';
   static const String educations = ' Educations';
+  static const String projects = ' Projects';
 
   static const String portfoli = 'About';
   static const String o = 'Me';

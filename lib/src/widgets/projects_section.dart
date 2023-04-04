@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import '/src/constants/projects_data.dart';
 import '/src/constants/strings.dart';
-import '/src/constants/text_styles.dart';
 import '/src/models/project.dart';
 import '/src/widgets/project_carousel_card.dart';
+import '/src/widgets/section_title.dart';
 
 class ProjectsSection extends StatelessWidget {
   const ProjectsSection({super.key});
@@ -12,10 +12,11 @@ class ProjectsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
-        Text(Strings.myProjects, style: TextStyles.heading),
-        const SizedBox(height: 10),
+        const SectionTitle(partOne: Strings.my, partTwo: Strings.projects),
+        const SizedBox(height: 16.0),
         ...projects.map((Project project) {
           return ProjectCrouselCard(
             title: project.title,

@@ -6,7 +6,7 @@ import '/src/widgets/educations_section.dart';
 import '/src/widgets/footer.dart';
 import '/src/widgets/skills_section.dart';
 import '/src/widgets/work_experiences_section.dart';
-// import '/src/widgets/projects_section.dart';
+import '/src/widgets/projects_section.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -33,10 +33,10 @@ class HomeScreen extends StatelessWidget {
             padding: EdgeInsets.all(32.0),
             child: EducationSection(),
           ),
-          // Padding(
-          //   padding: EdgeInsets.all(32.0),
-          //   child: ProjectsSection(),
-          // ),
+          Padding(
+            padding: EdgeInsets.all(32.0),
+            child: ProjectsSection(),
+          ),
         ],
       ),
       bottomNavigationBar: const Footer(),
