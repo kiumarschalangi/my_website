@@ -4,6 +4,7 @@ import '/src/widgets/about_me_section.dart';
 import '/src/widgets/appbar_title.dart';
 import '/src/widgets/footer.dart';
 import '/src/widgets/skills_section.dart';
+import '/src/widgets/work_experiences_section.dart';
 // import '/src/widgets/projects_section.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -22,6 +23,10 @@ class HomeScreen extends StatelessWidget {
           Padding(
             padding: EdgeInsets.all(32.0),
             child: SkillsSection(),
+          ),
+          Padding(
+            padding: EdgeInsets.all(32.0),
+            child: WorkExperiencesSection(),
           ),
           // Padding(
           //   padding: EdgeInsets.all(32.0),
