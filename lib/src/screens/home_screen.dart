@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '/src/constants/colors.dart';
-import '/src/constants/strings.dart';
-import '/src/constants/text_styles.dart';
 import '/src/screens/home_screen_large.dart';
+import '/src/widgets/appbar_title.dart';
 import '/src/widgets/footer.dart';
 import '/src/widgets/medium_screen_layout.dart';
 import '/src/widgets/responsive.dart';
@@ -15,19 +13,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: RichText(
-          text: TextSpan(
-            children: <TextSpan>[
-              TextSpan(text: Strings.firstName, style: TextStyles.logo),
-              TextSpan(
-                text: Strings.lastNameWithSpace,
-                style: TextStyles.logo.copyWith(color: AppColors.blue),
-              ),
-            ],
-          ),
-        ),
-      ),
+      appBar: AppBar(title: const AppBarTitle()),
       body: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
           return const SingleChildScrollView(
