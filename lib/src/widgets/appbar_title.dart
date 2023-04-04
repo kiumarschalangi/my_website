@@ -15,7 +15,7 @@ class AppBarTitle extends StatelessWidget {
           TextSpan(text: Strings.firstName, style: TextStyles.logo),
           TextSpan(
             text: Strings.lastNameWithSpace,
-            style: TextStyles.logo.copyWith(color: AppColors.blue),
+            style: TextStyles.logo.copyWith(color: AppColors.primary),
           ),
         ],
       ),

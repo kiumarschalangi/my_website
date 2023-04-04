@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '/src/screens/home_screen_large.dart';
+import '/src/widgets/about_me_section.dart';
 import '/src/widgets/appbar_title.dart';
 import '/src/widgets/footer.dart';
-import '/src/widgets/medium_screen_layout.dart';
-import '/src/widgets/responsive.dart';
-import '/src/widgets/small_screen_layout.dart';
+// import '/src/widgets/projects_section.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -14,16 +12,18 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const AppBarTitle()),
-      body: LayoutBuilder(
-        builder: (BuildContext context, BoxConstraints constraints) {
-          return const SingleChildScrollView(
-            child: ResponsiveWidget(
-              largeScreen: HomeScreenLarge(),
-              mediumScreen: MediumScreenLayout(),
-              smallScreen: SmallScreenLayout(),
-            ),
-          );
-        },
+      body: ListView(
+        children: const <Widget>[
+          Padding(
+            padding: EdgeInsets.all(32.0),
+            child: AboutMeSection(),
+          ),
+          SizedBox(height: 32.0),
+          // Padding(
+          //   padding: EdgeInsets.all(32.0),
+          //   child: ProjectsSection(),
+          // ),
+        ],
       ),
       bottomNavigationBar: const Footer(),
     );
