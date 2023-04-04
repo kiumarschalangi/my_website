@@ -4,9 +4,9 @@ import '/src/widgets/about_me_section.dart';
 import '/src/widgets/appbar_title.dart';
 import '/src/widgets/educations_section.dart';
 import '/src/widgets/footer.dart';
+import '/src/widgets/projects_section.dart';
 import '/src/widgets/skills_section.dart';
 import '/src/widgets/work_experiences_section.dart';
-import '/src/widgets/projects_section.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
