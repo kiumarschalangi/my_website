@@ -1,4 +1,4 @@
-import 'dart:html' as html;
+// import 'dart:html' as html;
 
 import 'package:flutter/material.dart';
 
@@ -17,7 +17,7 @@ class SocialMediaIconButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        html.window.open(url, name);
+        // html.window.open(url, name);
       },
       child: Image.asset(
         imagePath,

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_website/src/utils/screen.dart';
 import 'package:my_website/src/widgets/page_content.dart';
 import 'package:my_website/src/widgets/project_carousel_card.dart';
 import 'package:my_website/src/widgets/responsive.dart';
@@ -22,7 +21,8 @@ class SmallScreenLayout extends StatelessWidget {
         children: <Widget>[
           Image.asset(
             Assets.programmer,
-            height: ScreenUtil.getInstance().setWidth(345),
+            height: 200,
+            width: 200,
           ),
           const PageContent(),
           Text(Strings.myProjects, style: TextStyles.logo),
@@ -30,22 +30,22 @@ class SmallScreenLayout extends StatelessWidget {
               title: 'Yabex Flight booking Application',
               description:
                   'Yabex is a Mobile application to search the cheapest flights',
-              assetNames: [Assets.yabex1, Assets.yabex2]),
+              assetNames: <String>[Assets.yabex1, Assets.yabex2]),
           const ProjectCrouselCard(
               title: 'Data Maat',
               description:
                   'A platform to monitor the habist of the audience of Tv programms',
-              assetNames: [Assets.tvc1, Assets.tvc2, Assets.tvc3]),
+              assetNames: <String>[Assets.tvc1, Assets.tvc2, Assets.tvc3]),
           const ProjectCrouselCard(
               title: 'Taal',
               description:
                   'First E-scooter sharing application in Iran with more that 20000 users',
-              assetNames: [Assets.taal1, Assets.taal2]),
+              assetNames: <String>[Assets.taal1, Assets.taal2]),
           const ProjectCrouselCard(
               title: 'Mahta kala',
               description:
                   'Cross-platform Mobile application an Website for an Online shop',
-              assetNames: [
+              assetNames: <String>[
                 Assets.mahta1,
                 Assets.mahta2,
                 Assets.mahta3,
@@ -54,14 +54,14 @@ class SmallScreenLayout extends StatelessWidget {
               title: 'Canto',
               description:
                   'Cross-platform Mobile application and Desktop application for content creation',
-              assetNames: [
+              assetNames: <String>[
                 Assets.canto1,
                 Assets.canto2,
               ]),
           const ProjectCrouselCard(
               title: 'Bagzee',
               description: 'Luggage pick up service app for the drivers ',
-              assetNames: [
+              assetNames: <String>[
                 Assets.bagzee1,
                 Assets.bagzee2,
                 Assets.bagzee3,

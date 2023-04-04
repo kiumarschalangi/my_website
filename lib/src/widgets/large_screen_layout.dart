@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_website/src/constants/projects_data.dart';
 import 'package:my_website/src/constants/strings.dart';
 import 'package:my_website/src/constants/text_styles.dart';
-import 'package:my_website/src/utils/screen.dart';
 import 'package:my_website/src/widgets/page_content.dart';
 import 'package:my_website/src/widgets/project_carousel_card.dart';
 
@@ -26,7 +24,8 @@ class LargeScreenLayout extends StatelessWidget {
                 const PageContent(),
                 Image.asset(
                   Assets.programmer,
-                  height: ScreenUtil.getInstance().setWidth(345),
+                  height: 200,
+                  width: 200,
                 )
               ],
             ),
@@ -36,7 +35,7 @@ class LargeScreenLayout extends StatelessWidget {
             height: 80,
           ),
           Text(Strings.myProjects, style: TextStyles.heading),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           // SizedBox(

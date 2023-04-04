@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../constants/skills.dart';
-import '../constants/strings.dart';
-import '../constants/text_styles.dart';
-import 'custom_chip.dart';
+import '/src/constants/skills.dart';
+import '/src/constants/strings.dart';
+import '/src/constants/text_styles.dart';
+import '/src/widgets/custom_chip.dart';
 
 class SkillsSection extends StatelessWidget {
   const SkillsSection({super.key});
@@ -24,7 +24,7 @@ class SkillsSection extends StatelessWidget {
           style: TextStyles.subHeading,
         ),
         Wrap(children: widgets),
-        Divider()
+        const Divider()
       ],
     );
   }

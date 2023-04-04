@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screens/home.dart';
-import 'utils/screen.dart';
+import '/src/screens/home.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -12,23 +11,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.light,
+        useMaterial3: true,
       ),
-      home: const MyAppChild(),
+      home: const HomePage(),
     );
-  }
-}
-
-class MyAppChild extends StatefulWidget {
-  const MyAppChild({super.key});
-
-  @override
-  _MyAppChildState createState() => _MyAppChildState();
-}
-
-class _MyAppChildState extends State<MyAppChild> {
-  @override
-  Widget build(BuildContext context) {
-    ScreenUtil.instance = ScreenUtil.getInstance()..init(context);
-    return const HomePage();
   }
 }

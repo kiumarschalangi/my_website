@@ -1,6 +1,10 @@
 class Strings {
   Strings._();
 
+  static const String firstName = 'Mahan';
+  static const String lastName = 'Rahmati';
+  static const String lastNameWithSpace = ' $lastName';
+
   static const String about_me = 'About Me';
   static const String about = 'About';
   static const String me = ' Me';
