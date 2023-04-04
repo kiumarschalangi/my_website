@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
 import '/src/constants/assets.dart';
-import '/src/constants/colors.dart';
-import '/src/constants/fonts.dart';
 import '/src/constants/strings.dart';
 import '/src/constants/text_styles.dart';
 import '/src/utils/screen.dart';
+import '/src/widgets/section_title.dart';
 
 class AboutMeSection extends StatelessWidget {
   const AboutMeSection({super.key});
@@ -17,30 +16,7 @@ class AboutMeSection extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        RichText(
-          text: TextSpan(
-            style: const TextStyle(
-              fontSize: 14.0,
-              color: Colors.black,
-            ),
-            children: <TextSpan>[
-              TextSpan(
-                text: Strings.about,
-                style: TextStyles.heading.copyWith(
-                  fontFamily: Fonts.nexa_light,
-                  fontSize: isSmall ? 36 : 45.0,
-                ),
-              ),
-              TextSpan(
-                text: Strings.me,
-                style: TextStyles.heading.copyWith(
-                  color: AppColors.primary,
-                  fontSize: isSmall ? 36 : 45.0,
-                ),
-              ),
-            ],
-          ),
-        ),
+        const SectionTitle(partOne: Strings.about, partTwo: Strings.me),
         const SizedBox(height: 16.0),
         Text(
           Strings.summary,

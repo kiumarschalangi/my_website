@@ -2,12 +2,12 @@ class Strings {
   Strings._();
 
   static const String firstName = 'Mahan';
-  static const String lastName = 'Rahmati';
-  static const String lastNameWithSpace = ' $lastName';
-
-  static const String about_me = 'About Me';
+  static const String lastName = ' Rahmati';
   static const String about = 'About';
   static const String me = ' Me';
+  static const String my = 'My';
+  static const String skills = ' Skills';
+
   static const String portfoli = 'About';
   static const String o = 'Me';
   static const String headline = 'kiumars chaharlangi';
@@ -19,7 +19,7 @@ class Strings {
       'Started my journy as an intern in a small start-up and now i work in one of the biggest marketing companies in iran';
   static const String skills_i_have = 'What are my Skills';
   static const String rights_reserved =
-      'Build and developed by $firstName $lastName 2023';
+      'Build and developed by $firstName$lastName 2023';
   static const String educationSummary =
       'I was always intrested in mechanics as well as computers science so i said to myself why not study both?';
 
