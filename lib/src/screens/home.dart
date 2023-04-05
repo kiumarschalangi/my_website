@@ -13,34 +13,30 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: const Color(0xFFF7F8FA),
-      child: Padding(
+    return Scaffold(
+      backgroundColor: const Color(0xFFF7F8FA),
+      appBar: const CustomAppBar(),
+      drawer:
+          ResponsiveWidget.isSmallScreen(context) ? const CustomDrawer() : null,
+      body: Padding(
         padding: EdgeInsets.symmetric(
           horizontal: ScreenUtil.getInstance().setWidth(108),
         ),
-        child: Scaffold(
-          backgroundColor: Colors.transparent,
-          appBar: const CustomAppBar(),
-          drawer: ResponsiveWidget.isSmallScreen(context)
-              ? const CustomDrawer()
-              : null,
-          body: LayoutBuilder(
-              builder: (BuildContext context, BoxConstraints constraints) {
-            return SingleChildScrollView(
-              child: ConstrainedBox(
-                constraints: BoxConstraints(
-                    minWidth: constraints.maxWidth,
-                    minHeight: constraints.maxHeight),
-                child: const ResponsiveWidget(
-                  largeScreen: LargeScreenLayout(),
-                  mediumScreen: MediumScreenLayout(),
-                  smallScreen: SmallScreenLayout(),
-                ),
+        child: LayoutBuilder(
+            builder: (BuildContext context, BoxConstraints constraints) {
+          return SingleChildScrollView(
+            child: ConstrainedBox(
+              constraints: BoxConstraints(
+                  minWidth: constraints.maxWidth,
+                  minHeight: constraints.maxHeight),
+              child: const ResponsiveWidget(
+                largeScreen: LargeScreenLayout(),
+                mediumScreen: MediumScreenLayout(),
+                smallScreen: SmallScreenLayout(),
               ),
-            );
-          }),
-        ),
+            ),
+          );
+        }),
       ),
     );
   }
