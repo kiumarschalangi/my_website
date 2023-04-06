@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_website/src/widgets/responsive.dart';
 
-import '../constants/text_styles.dart';
+import '/src/constants/text_styles.dart';
+import '/src/utils/screen.dart';
 
 class CustomChip extends StatelessWidget {
   const CustomChip({
@@ -16,7 +16,7 @@ class CustomChip extends StatelessWidget {
       label: Text(
         label,
         style: TextStyles.chip.copyWith(
-          fontSize: ResponsiveWidget.isSmallScreen(context) ? 10.0 : 11.0,
+          fontSize: isSmallScreen(context) ? 10.0 : 11.0,
         ),
       ),
     );

@@ -1,17 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:my_website/src/constants/strings.dart';
-import 'package:my_website/src/widgets/responsive.dart';
 
-import '../constants/fonts.dart';
-import '../constants/text_styles.dart';
+import '/src/constants/colors.dart';
+import '/src/constants/fonts.dart';
+import '/src/constants/text_styles.dart';
+import '/src/utils/screen.dart';
 
-class AboutMe extends StatelessWidget {
-  const AboutMe({
+class SectionTitle extends StatelessWidget {
+  const SectionTitle({
     super.key,
+    required this.partOne,
+    required this.partTwo,
   });
 
+  final String partOne;
+  final String partTwo;
   @override
   Widget build(BuildContext context) {
+    final bool isSmall = isSmallScreen(context);
     return RichText(
       text: TextSpan(
         style: const TextStyle(
@@ -20,17 +25,17 @@ class AboutMe extends StatelessWidget {
         ),
         children: <TextSpan>[
           TextSpan(
-            text: Strings.about,
+            text: partOne,
             style: TextStyles.heading.copyWith(
               fontFamily: Fonts.nexa_light,
-              fontSize: ResponsiveWidget.isSmallScreen(context) ? 36 : 45.0,
+              fontSize: isSmall ? 36 : 45.0,
             ),
           ),
           TextSpan(
-            text: Strings.me,
+            text: partTwo,
             style: TextStyles.heading.copyWith(
-              color: const Color(0xFF50AFC0),
-              fontSize: ResponsiveWidget.isSmallScreen(context) ? 36 : 45.0,
+              color: AppColors.primary,
+              fontSize: isSmall ? 36 : 45.0,
             ),
           ),
         ],
