@@ -1,8 +1,8 @@
 class Strings {
   Strings._();
 
-  static const String firstName = 'Mahan';
-  static const String lastName = ' Rahmati';
+  static const String firstName = 'Kiumars';
+  static const String lastName = ' Chaharlangi';
   static const String about = 'About';
   static const String me = ' Me';
   static const String my = 'My';
