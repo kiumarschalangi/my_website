@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:my_website/src/constants/projects_data.dart';
-import 'package:my_website/src/constants/strings.dart';
-import 'package:my_website/src/constants/text_styles.dart';
+import 'package:my_website/src/constants/strings.dart' as strings;
 import 'package:my_website/src/utils/screen.dart';
 import 'package:my_website/src/widgets/page_content.dart';
 import 'package:my_website/src/widgets/project_carousel_card.dart';
 
-import '../constants/assets.dart';
+import '../constants/text_styles.dart' as text_styles;
+import 'package:my_website/src/constants/assets.dart' as assets;
 import 'custom_footer.dart';
 
 class LargeScreenLayout extends StatelessWidget {
@@ -25,7 +25,7 @@ class LargeScreenLayout extends StatelessWidget {
               children: <Widget>[
                 const PageContent(),
                 Image.asset(
-                  Assets.programmer,
+                  assets.programmer,
                   height: ScreenUtil.getInstance().setWidth(345),
                 )
               ],
@@ -35,7 +35,7 @@ class LargeScreenLayout extends StatelessWidget {
           const SizedBox(
             height: 80,
           ),
-          Text(Strings.myProjects, style: TextStyles.heading),
+          Text(strings.myProjects, style: text_styles.heading),
           const SizedBox(
             height: 10,
           ),
@@ -56,33 +56,33 @@ class LargeScreenLayout extends StatelessWidget {
           //     title: 'Yabex Flight booking Application',
           //     description:
           //         'Yabex is a Mobile application to search the cheapest flights',
-          //     assetNames: [Assets.yabex1, Assets.yabex2]),
+          //     assetNames: [assets.yabex1, assets.yabex2]),
           // const ProjectCrouselCard(
           //     title: 'Data Maat',
           //     description:
           //         'A platform to monitor the habist of the audience of Tv programms',
-          //     assetNames: [Assets.tvc1, Assets.tvc2, Assets.tvc3]),
+          //     assetNames: [assets.tvc1, assets.tvc2, assets.tvc3]),
           // const ProjectCrouselCard(
           //     title: 'Taal',
           //     description:
           //         'First E-scooter sharing application in Iran with more that 20000 users',
-          //     assetNames: [Assets.taal1, Assets.taal2]),
+          //     assetNames: [assets.taal1, assets.taal2]),
           // const ProjectCrouselCard(
           //     title: 'Mahta kala',
           //     description:
           //         'Cross-platform Mobile application an Website for an Online shop',
           //     assetNames: [
-          //       Assets.mahta1,
-          //       Assets.mahta2,
-          //       Assets.mahta3,
+          //       assets.mahta1,
+          //       assets.mahta2,
+          //       assets.mahta3,
           //     ]),
           // const ProjectCrouselCard(
           //     title: 'Canto',
           //     description:
           //         'Cross-platform Mobile application and Desktop application for content creation',
           //     assetNames: [
-          //       Assets.canto1,
-          //       Assets.canto2,
+          //       assets.canto1,
+          //       assets.canto2,
           //     ]),
           const CustomFooter()
         ],

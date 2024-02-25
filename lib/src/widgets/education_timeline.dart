@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../constants/text_styles.dart';
+import '../constants/text_styles.dart' as text_styles;
 import '../models/education.dart';
 
 class EducationTimeLine extends StatelessWidget {
@@ -19,17 +19,17 @@ class EducationTimeLine extends StatelessWidget {
         children: <Widget>[
           Text(
             education.organization,
-            style: TextStyles.company,
+            style: text_styles.company,
           ),
           Text(
             education.post,
-            style: TextStyles.body.copyWith(
+            style: text_styles.body.copyWith(
               color: const Color(0xFF45405B),
             ),
           ),
           Text(
             '${education.from}-${education.to}',
-            style: TextStyles.body,
+            style: text_styles.body,
           ),
         ],
       ),

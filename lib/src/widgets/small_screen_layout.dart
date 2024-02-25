@@ -5,9 +5,10 @@ import 'package:my_website/src/widgets/project_carousel_card.dart';
 import 'package:my_website/src/widgets/responsive.dart';
 import 'package:my_website/src/widgets/social_media_icons.dart';
 
-import '../constants/assets.dart';
-import '../constants/strings.dart';
-import '../constants/text_styles.dart';
+import '../constants/assets.dart' as assets;
+
+import '../constants/strings.dart' as strings;
+import '../constants/text_styles.dart' as text_styles;
 
 class SmallScreenLayout extends StatelessWidget {
   const SmallScreenLayout({
@@ -21,54 +22,54 @@ class SmallScreenLayout extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           Image.asset(
-            Assets.programmer,
+            assets.programmer,
             height: ScreenUtil.getInstance().setWidth(345),
           ),
           const PageContent(),
-          Text(Strings.myProjects, style: TextStyles.logo),
+          Text(strings.myProjects, style: text_styles.logo),
           const ProjectCrouselCard(
               title: 'Yabex Flight booking Application',
               description:
                   'Yabex is a Mobile application to search the cheapest flights',
-              assetNames: [Assets.yabex1, Assets.yabex2]),
+              assetNames: [assets.yabex1, assets.yabex2]),
           const ProjectCrouselCard(
               title: 'Data Maat',
               description:
                   'A platform to monitor the habist of the audience of Tv programms',
-              assetNames: [Assets.tvc1, Assets.tvc2, Assets.tvc3]),
+              assetNames: [assets.tvc1, assets.tvc2, assets.tvc3]),
           const ProjectCrouselCard(
               title: 'Taal',
               description:
                   'First E-scooter sharing application in Iran with more that 20000 users',
-              assetNames: [Assets.taal1, Assets.taal2]),
+              assetNames: [assets.taal1, assets.taal2]),
           const ProjectCrouselCard(
               title: 'Mahta kala',
               description:
                   'Cross-platform Mobile application an Website for an Online shop',
               assetNames: [
-                Assets.mahta1,
-                Assets.mahta2,
-                Assets.mahta3,
+                assets.mahta1,
+                assets.mahta2,
+                assets.mahta3,
               ]),
           const ProjectCrouselCard(
               title: 'Canto',
               description:
                   'Cross-platform Mobile application and Desktop application for content creation',
               assetNames: [
-                Assets.canto1,
-                Assets.canto2,
+                assets.canto1,
+                assets.canto2,
               ]),
           const ProjectCrouselCard(
               title: 'Bagzee',
               description: 'Luggage pick up service app for the drivers ',
               assetNames: [
-                Assets.bagzee1,
-                Assets.bagzee2,
-                Assets.bagzee3,
+                assets.bagzee1,
+                assets.bagzee2,
+                assets.bagzee3,
               ]),
           Text(
-            Strings.rights_reserved,
-            style: TextStyles.body1.copyWith(
+            strings.rights_reserved,
+            style: text_styles.body1.copyWith(
               fontSize: ResponsiveWidget.isSmallScreen(context) ? 8 : 10.0,
             ),
           ),

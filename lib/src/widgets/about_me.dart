@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:my_website/src/constants/strings.dart';
+import 'package:my_website/src/constants/strings.dart' as strings;
 import 'package:my_website/src/widgets/responsive.dart';
 
-import '../constants/fonts.dart';
-import '../constants/text_styles.dart';
+import '../constants/fonts.dart' as fonts;
+import '../constants/text_styles.dart' as text_styles;
 
 class AboutMe extends StatelessWidget {
   const AboutMe({
@@ -20,15 +20,15 @@ class AboutMe extends StatelessWidget {
         ),
         children: <TextSpan>[
           TextSpan(
-            text: Strings.about,
-            style: TextStyles.heading.copyWith(
-              fontFamily: Fonts.nexa_light,
+            text: strings.about,
+            style: text_styles.heading.copyWith(
+              fontFamily: fonts.nexa_light,
               fontSize: ResponsiveWidget.isSmallScreen(context) ? 36 : 45.0,
             ),
           ),
           TextSpan(
-            text: Strings.me,
-            style: TextStyles.heading.copyWith(
+            text: strings.me,
+            style: text_styles.heading.copyWith(
               color: const Color(0xFF50AFC0),
               fontSize: ResponsiveWidget.isSmallScreen(context) ? 36 : 45.0,
             ),

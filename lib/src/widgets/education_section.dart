@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../constants/education_data.dart';
-import '../constants/strings.dart';
-import '../constants/text_styles.dart';
+import '../constants/strings.dart' as strings;
+import '../constants/text_styles.dart' as text_styles;
 import '../models/education.dart';
 import '../models/experience.dart';
 import '../widgets/education_timeline.dart';
@@ -31,12 +31,12 @@ class EducationSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(
-          isEducation ? Strings.education : Strings.experience,
-          style: TextStyles.subHeading,
+          isEducation ? strings.education : strings.experience,
+          style: text_styles.subHeading,
         ),
         Text(
-          isEducation ? Strings.educationSummary : Strings.experienceSummary,
-          style: TextStyles.body,
+          isEducation ? strings.educationSummary : strings.experienceSummary,
+          style: text_styles.body,
         ),
         Column(children: isEducation ? educationWidgets : experienceWidgets)
       ],

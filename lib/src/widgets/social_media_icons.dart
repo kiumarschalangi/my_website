@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_website/src/widgets/social_media_icon_button.dart';
 
-import '../constants/assets.dart';
+import '../constants/assets.dart' as assets;
 
 class SocialMediaButtons extends StatelessWidget {
   const SocialMediaButtons({
@@ -10,29 +10,29 @@ class SocialMediaButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: const <Widget>[
+      children: <Widget>[
         SocialMediaIconButton(
-          imagePath: Assets.linkedin,
+          imagePath: assets.linkedin,
           name: 'Linkedin',
           url: 'https://www.linkedin.com/in/kiumars-chaharlangi/',
         ),
         SizedBox(width: 16.0),
         SocialMediaIconButton(
-          imagePath: Assets.evernote,
+          imagePath: assets.evernote,
           name: 'evernote',
           url: 'https://www.linkedin.com/in/kiumars-chaharlangi/',
         ),
         SizedBox(width: 16.0),
         SocialMediaIconButton(
-          imagePath: Assets.google,
+          imagePath: assets.google,
           name: 'google',
           url: 'https://www.linkedin.com/in/kiumars-chaharlangi/',
         ),
         SizedBox(width: 16.0),
         SocialMediaIconButton(
-          imagePath: Assets.twitter,
+          imagePath: assets.twitter,
           name: 'twitter',
           url: 'https://www.linkedin.com/in/kiumars-chaharlangi/',
         ),

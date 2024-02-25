@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../constants/skills.dart';
-import '../constants/strings.dart';
-import '../constants/text_styles.dart';
+import '../constants/strings.dart' as strings;
+import '../constants/text_styles.dart' as text_styles;
 import 'custom_chip.dart';
 
 class SkillsSection extends StatelessWidget {
@@ -20,8 +20,8 @@ class SkillsSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(
-          Strings.skills_i_have,
-          style: TextStyles.subHeading,
+          strings.skills_i_have,
+          style: text_styles.subHeading,
         ),
         Wrap(children: widgets),
         Divider()

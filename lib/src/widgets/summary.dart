@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_website/src/constants/strings.dart';
-import 'package:my_website/src/constants/text_styles.dart';
+import 'package:my_website/src/constants/strings.dart' as strings;
+import 'package:my_website/src/constants/text_styles.dart' as text_styles;
 
 class SummarySection extends StatelessWidget {
   const SummarySection({
@@ -12,8 +12,8 @@ class SummarySection extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(right: 80.0),
       child: Text(
-        Strings.summary,
-        style: TextStyles.body,
+        strings.summary,
+        style: text_styles.body,
       ),
     );
   }

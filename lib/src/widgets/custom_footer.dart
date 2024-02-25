@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:my_website/src/widgets/responsive.dart';
 import 'package:my_website/src/widgets/social_media_icons.dart';
 
-import '../constants/strings.dart';
-import '../constants/text_styles.dart';
+import '../constants/strings.dart' as strings;
+import '../constants/text_styles.dart' as text_styles;
 
 class CustomFooter extends StatelessWidget {
   const CustomFooter({
@@ -23,8 +23,8 @@ class CustomFooter extends StatelessWidget {
               Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    Strings.rights_reserved,
-                    style: TextStyles.body1.copyWith(
+                    strings.rights_reserved,
+                    style: text_styles.body1.copyWith(
                       fontSize:
                           ResponsiveWidget.isSmallScreen(context) ? 8 : 10.0,
                     ),

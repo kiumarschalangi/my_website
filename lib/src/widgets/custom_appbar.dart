@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_website/src/widgets/responsive.dart';
 
-import '../constants/strings.dart';
-import '../constants/text_styles.dart';
+import '../constants/strings.dart' as strings;
+import '../constants/text_styles.dart' as text_styles;
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({
@@ -24,11 +24,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           children: <TextSpan>[
             TextSpan(
               text: 'Kiumars',
-              style: TextStyles.logo,
+              style: text_styles.logo,
             ),
             TextSpan(
               text: ' Chaharlangi',
-              style: TextStyles.logo.copyWith(
+              style: text_styles.logo.copyWith(
                 color: const Color(0xFF50AFC0),
               ),
             ),
@@ -41,8 +41,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           ? <Widget>[
               MaterialButton(
                 child: Text(
-                  Strings.menu_home,
-                  style: TextStyles.menuItem.copyWith(
+                  strings.menu_home,
+                  style: text_styles.menuItem.copyWith(
                     color: const Color(0xFF50AFC0),
                   ),
                 ),
@@ -50,8 +50,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               ),
               MaterialButton(
                   child: Text(
-                    Strings.menu_about,
-                    style: TextStyles.menuItem,
+                    strings.menu_about,
+                    style: text_styles.menuItem,
                   ),
                   onPressed: () {
                     showCupertinoDialog(
@@ -72,8 +72,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   }),
               MaterialButton(
                 child: Text(
-                  Strings.menu_contact,
-                  style: TextStyles.menuItem,
+                  strings.menu_contact,
+                  style: text_styles.menuItem,
                 ),
                 onPressed: () {},
               ),

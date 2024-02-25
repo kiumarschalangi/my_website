@@ -1,7 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:my_website/src/constants/text_styles.dart';
 import 'package:my_website/src/widgets/responsive.dart';
+
+import '../constants/text_styles.dart' as text_styles;
 
 class ProjectCrouselCard extends StatelessWidget {
   const ProjectCrouselCard({
@@ -28,14 +29,14 @@ class ProjectCrouselCard extends StatelessWidget {
                     children: <Widget>[
                       Text(
                         title,
-                        style: TextStyles.subHeading,
+                        style: text_styles.subHeading,
                       ),
                       const SizedBox(
                         height: 10,
                       ),
                       Text(
                         description,
-                        style: TextStyles.body,
+                        style: text_styles.body,
                       ),
                     ],
                   ),
@@ -80,12 +81,12 @@ class ProjectCrouselCard extends StatelessWidget {
                       title: Text(
                         title,
                         textAlign: TextAlign.center,
-                        style: TextStyles.subHeading,
+                        style: text_styles.subHeading,
                       ),
                       subtitle: Text(
                         description,
                         textAlign: TextAlign.center,
-                        style: TextStyles.body,
+                        style: text_styles.body,
                       ),
                     ),
                     SizedBox(
